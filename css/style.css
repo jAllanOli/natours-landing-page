@@ -48,9 +48,14 @@ body {
   height: 35px;
 }
 
+.text-box {
+  text-align: center;
+}
+
 .heading-primary {
   color: #fff;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .heading-primary__main {
@@ -70,6 +75,59 @@ body {
   letter-spacing: 17.4px;
 
   animation: fromRight 1.5s ease-in-out;
+}
+
+.button:link,
+.button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 250ms ease-in-out;
+  position: relative;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.button-white::after {
+  background-color: white;
+}
+
+.button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.button-animated {
+  animation: fromBottom 500ms ease-out 750ms;
+  animation-fill-mode: backwards;
 }
 
 @keyframes fromLeft {
@@ -103,5 +161,17 @@ body {
     opacity: 1;
 
     transform: translate3d(0);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
