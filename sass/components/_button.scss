@@ -35,6 +35,15 @@
     }
   }
 
+  &--green {
+    background-color: $primary-color;
+    color: $neutral-02;
+
+    &::after {
+      background-color: $primary-color;
+    }
+  }
+
   &::after {
     content: "";
     display: inline-block;
