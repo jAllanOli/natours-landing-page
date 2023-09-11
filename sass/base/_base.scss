@@ -8,6 +8,18 @@
 
 html {
   font-size: 62.5%;
+
+  @include query(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include query(tab-port) {
+    font-size: 50%;
+  }
+
+  @include query(lg-desk) {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -15,4 +27,8 @@ body {
   line-height: 1.7;
   color: $neutral-01;
   padding: 3rem;
+
+  @include query(tab-port) {
+    padding: 0;
+  }
 }

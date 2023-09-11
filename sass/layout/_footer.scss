@@ -3,9 +3,17 @@
   padding: 10rem 0;
   font-size: $body-sm;
 
+  @include query(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include query(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -16,6 +24,11 @@
     border-top: 1px solid $neutral-04;
     padding-top: 2rem;
     display: inline-block;
+
+    @include query(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -54,5 +67,11 @@
     width: 80%;
     color: $neutral-04;
     float: right;
+
+    @include query(tab-port) {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
   }
 }

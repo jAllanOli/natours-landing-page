@@ -15,6 +15,16 @@
     box-shadow: 0 1rem 3rem rgba($neutral-dark, 0.25);
     text-align: center;
     cursor: pointer;
+
+    @include query(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include query(mob) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -30,6 +40,16 @@
     );
     z-index: 100;
     transition: all 400ms cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include query(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include query(mob) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
