@@ -173,7 +173,8 @@
     font-weight: 100;
   }
 
-  @include query(tab-port) {
+  // @include query(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $neutral-02;
